@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  margin: 0 5rem;
+}
+
+.set{
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 4rem;
+}
+
+.input{
+  font-size: 20px;
+  width: 150px;
+}
+
+.btn{
+  font-size: 20px;
+  width: 150px;
+  background-color: cornflowerblue;
+  border-color: azure;
+  border-radius: 20px;
+}
+
+.timer{
+  font-size: 200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.operation{
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 8rem;
+}
