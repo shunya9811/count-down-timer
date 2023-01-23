@@ -148,12 +148,12 @@ class App extends React.Component {
           return
         }
         updatedHours--
-        updatedMinutes = 59
-        updatedSeconds = 59
+        updatedMinutes = 60;
+        updatedSeconds = 60;
         
       } 
       updatedMinutes--
-      updatedSeconds = 59
+      updatedSeconds = 60;
     }
     updatedSeconds--
     
@@ -207,8 +207,8 @@ class App extends React.Component {
         />
         <div className='timer'>{this.formatDisplay()}</div>
         <div className='operation'>
-          <button className='btn' onClick={this.stop} disabled={this.state.started ? !this.state.moving : true}>一時停止</button>
-          <button className='btn' onClick={this.resume} disabled={this.state.started ? this.state.moving : true}>再スタート</button>
+          <button className='btn' onClick={this.stop} disabled={this.state.started && !this.state.isTimeUp ? !this.state.moving : true}>一時停止</button>
+          <button className='btn' onClick={this.resume} disabled={this.state.started && !this.state.isTimeUp ? this.state.moving : true}>再スタート</button>
           <button className='btn' onClick={this.reset} disabled={!this.state.started}>リセット</button>
         </div>
         <div className='timeup'>{this.state.isTimeUp ? "Time Up!" : ""}</div>
